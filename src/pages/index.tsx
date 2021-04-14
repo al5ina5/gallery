@@ -2,7 +2,7 @@ import axios from 'axios'
 import Photo from '../components/Photo'
 
 export async function getServerSideProps() {
-    const { data } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/media?per_page=100')
+    const { data, headers } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/media?per_page=100')
 
     return { props: { posts: data } }
 }
@@ -25,7 +25,7 @@ export default function App({ posts }: any) {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
                     <Photo post={post} />
                 ))}
