@@ -2,7 +2,7 @@ import axios from 'axios'
 import Photo from '../components/Photo'
 
 export async function getServerSideProps() {
-    const { data } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/posts?_embed')
+    const { data } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/posts?_embed&per_page=100')
 
     return { props: { posts: data } }
 }
@@ -16,6 +16,9 @@ export default function App({ posts }: any) {
                     <p className="text-2xl">Creative Photography. Naples, FL.</p>
                 </div>
                 <div className="text-xs uppercase space-x-2">
+                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cesaralsina/">
+                        Instagram
+                    </a>
                     <a href="mailto:alsina@mac.com">Contact</a>
                     {/* <a href="">Facebook</a>
                     <a href="">Foundation</a> */}
