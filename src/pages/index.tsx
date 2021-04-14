@@ -2,7 +2,7 @@ import axios from 'axios'
 import Photo from '../components/Photo'
 
 export async function getServerSideProps() {
-    const { data } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/posts?_embed&per_page=100')
+    const { data } = await axios.get('https://cesaralsina.apps.revolt.host/wp-json/wp/v2/media?per_page=100')
 
     return { props: { posts: data } }
 }
