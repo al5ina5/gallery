@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-        domains: ['cesaralsina.apps.revolt.host']
+        domains: ['cesaralsina.apps.revolt.host', 'cdninstagram.com']
     },
     typescript: {
         // !! WARN !!
